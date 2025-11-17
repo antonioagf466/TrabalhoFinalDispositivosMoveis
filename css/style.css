@@ -339,6 +339,32 @@ body {
     margin-right: 20px;
 }
 
+.item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-title-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-title-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-title-link:hover .item-title {
+    color: var(--blue-primary);
+}
+
 .item-details {
     flex: 1;
 }

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhe Conosco - Mercado Dibre</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header-top">
+            <div class="header-container1">
+                <!-- Logo -->
+                <div class="brand-logo">
+                    <a href="index.html" aria-label="Página inicial">
+                        <img src="" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Barra de Pesquisa -->
+                <form class="search-form">
+                    <input type="text" placeholder="Buscar..." aria-label="Buscar produtos">
+                    <button type="submit" aria-label="Pesquisar">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <nav>
+                    <ul>
+                        <li class="dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-label="Menu usuário">
+                                <i class="bi bi-person"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Minha conta</a></li>
+                                <li><a class="dropdown-item" href="#">Compras</a></li>
+                                <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-link" href="#" aria-label="Carrinho de compras">
+                            <i class="bi bi-cart3"></i>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+                <!-- Ações -->
+                <div class="header-container2">
+                    <nav>
+                            <nav>
+                                <ul>
+                                    <li><a href="">Ofertas</a></li>
+                                    <li><a href="vender.html">Vender</a></li>
+                                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                                    <li><a href="contato.html">Contato</a></li>
+                                    <li><a href="trabalhe.html">Trabalhe Conosco</a></li>
+                    </nav>
+                </div>
+        </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <div class="careers-container">
+            <h1 class="careers-title">Trabalhe Conosco</h1>
+            
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <h2 class="hero-title">Faça parte do nosso time</h2>
+                <p class="hero-subtitle">Junte-se a uma das maiores empresas de tecnologia da América Latina e ajude a transformar a vida de milhões de pessoas.</p>
+            </div>
+            
+            <!-- Formulário de Candidatura -->
+            <h2 class="section-title">Candidate-se</h2>
+            <form id="careersForm">
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="firstName" class="form-label">Nome *</label>
+                        <input type="text" class="form-control" id="firstName" required>
+                    </div>
+                    
+                    <div class="form-group half">
+                        <label for="lastName" class="form-label">Sobrenome *</label>
+                        <input type="text" class="form-control" id="lastName" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="cpf" class="form-label">CPF *</label>
+                        <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+                        <div class="form-text">Apenas números e pontos</div>
+                    </div>
+                    
+                    <div class="form-group half">
+                        <label for="phone" class="form-label">Telefone *</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="(11) 99999-9999" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">E-mail *</label>
+                    <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="position" class="form-label">Cargo de Interesse *</label>
+                    <select class="form-select" id="position" required>
+                        <option value="" selected disabled>Selecione uma área</option>
+                        <option value="tech">Tecnologia/Desenvolvimento</option>
+                        <option value="design">Design/UX</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="sales">Vendas</option>
+                        <option value="support">Atendimento ao Cliente</option>
+                        <option value="finance">Financeiro</option>
+                        <option value="hr">Recursos Humanos</option>
+                        <option value="other">Outro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="experience" class="form-label">Experiência Profissional *</label>
+                    <textarea class="form-control" id="experience" rows="4" placeholder="Descreva sua experiência profissional, empresas em que trabalhou, cargos e responsabilidades..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="education" class="form-label">Formação Acadêmica</label>
+                    <textarea class="form-control" id="education" rows="3" placeholder="Informe sua formação, cursos, especializações..."></textarea>
+                </div>
+                
+                <!-- Upload de Currículo -->
+                <div class="form-group">
+                    <label class="form-label">Currículo *</label>
+                    <div class="file-upload-area" id="resumeUpload">
+                        <div class="upload-icon">
+                            <i class="bi bi-cloud-arrow-up"></i>
+                        </div>
+                        <p class="upload-text">Clique para enviar seu currículo</p>
+                        <p class="upload-subtext">Formatos: PDF, DOC, DOCX. Tamanho máximo: 5MB</p>
+                    </div>
+                    <input type="file" id="resumeInput" class="file-input" accept=".pdf,.doc,.docx">
+                    <div id="selectedFile" class="selected-file"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Mensagem/Carta de Apresentação</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Conte-nos por que você quer trabalhar conosco..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="privacyPolicy" required>
+                        <label class="form-check-label" for="privacyPolicy">
+                            Concordo com a política de privacidade e autorizo o uso dos meus dados para processos seletivos *
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-submit">Enviar Candidatura</button>
+            </form>
+            
+            <!-- Benefícios -->
+            <h2 class="section-title">Por que trabalhar conosco?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="bi bi-gem"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Plano de Carreira</h3>
+                        <p>Oportunidades de crescimento e desenvolvimento profissional contínuo</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="bi bi-heart-pulse"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Plano de Saúde</h3>
+                        <p>Assistência médica e odontológica de qualidade para você e sua família</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="bi bi-cash-coin"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Vale Refeição</h3>
+                        <p>Auxílio alimentação para suas refeições diárias</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="bi bi-bus-front"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Vale Transporte</h3>
+                        <p>Facilitamos seu deslocamento para o trabalho</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Trabalho Híbrido</h3>
+                        <p>Flexibilidade para trabalhar de casa e no escritório</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Bônus e PLR</h3>
+                        <p>Participação nos lucros e resultados da empresa</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Áreas de Atuação -->
+            <h2 class="section-title">Áreas de Atuação</h2>
+            <div class="departments-container">
+                <p>Estamos sempre em busca de talentos para diversas áreas. Confira algumas das nossas principais áreas de atuação:</p>
+                
+                <div class="department-list">
+                    <div class="department-item">Tecnologia</div>
+                    <div class="department-item">Produto</div>
+                    <div class="department-item">Dados</div>
+                    <div class="department-item">Design</div>
+                    <div class="department-item">Marketing</div>
+                    <div class="department-item">Vendas</div>
+                    <div class="department-item">Jurídico</div>
+                    <div class="department-item">Financeiro</div>
+                </div>
+            </div>
+            
+            <!-- Depoimento -->
+            <div class="testimonial">
+                <p class="testimonial-text">"Trabalhar no Mercado Dibre mudou minha carreira. A cultura de inovação e o ambiente colaborativo me permitiram crescer profissionalmente de forma que nunca imaginei."</p>
+                <p class="testimonial-author">Maria Silva</p>
+                <p class="testimonial-role">Desenvolvedora Sênior - 3 anos na empresa</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-sections">
+                <!-- Seção 1 -->
+                <div class="footer-section">
+                    <h6>Informações</h6>
+                    <div class="footer-links">
+                        <a href="sobrenos.html">Sobre nós</a>
+                        <a href="contato.html">Contato</a>
+                        <a href="#">Política de privacidade</a>
+                        <a href="#">Termos e condições</a>
+                    </div>
+                </div>
+
+                <!-- Seção 2 -->
+                <div class="footer-section">
+                    <h6>Minha conta</h6>
+                    <div class="footer-links">
+                        <a href="#">Entrar</a>
+                        <a href="#">Meus pedidos</a>
+                        <a href="#">Lista de desejos</a>
+                        <a href="#">Histórico</a>
+                    </div>
+                </div>
+
+                <!-- Seção 3 -->
+                <div class="footer-section">
+                    <h6>Atendimento</h6>
+                    <div class="footer-links">
+                        <a href="contato.html">Ajuda</a>
+                        <a href="contato.html">Frete</a>
+                        <a href="contato.html">Trocas</a>
+                        <a href="contato.html">Devoluções</a>
+                    </div>
+                </div>
+
+                <!-- Seção 4 -->
+                <div class="footer-section">
+                    <h6>Redes sociais</h6>
+                    <div class="footer-links">
+                        <a href="https://www.facebook.com"><i class="bi bi-facebook"></i> Facebook</a>
+                        <a href="https://x.com/home"><i class="bi bi-twitter"></i> Twitter</a>
+                        <a href="https://www.instagram.com"><i class="bi bi-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>© 2023 Mercado Dibre - Todos os direitos reservados</p>
+            </div>
+        </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Upload de currículo
+        const resumeUpload = document.getElementById('resumeUpload');
+        const resumeInput = document.getElementById('resumeInput');
+        const selectedFile = document.getElementById('selectedFile');
+        
+        resumeUpload.addEventListener('click', () => {
+            resumeInput.click();
+        });
+        
+        resumeInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                selectedFile.textContent = `Arquivo selecionado: ${file.name}`;
+            }
+        });
+        
+        // Formatação de CPF
+        document.getElementById('cpf').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 11) {
+                value = value.substring(0, 11);
+            }
+            
+            if (value.length > 9) {
+                value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+            } else if (value.length > 6) {
+                value = value.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
+            } else if (value.length > 3) {
+                value = value.replace(/(\d{3})(\d{1,3})/, '$1.$2');
+            }
+            
+            e.target.value = value;
+        });
+        
+        // Formatação de telefone
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 11) {
+                value = value.substring(0, 11);
+            }
+            
+            if (value.length > 10) {
+                value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+            } else if (value.length > 6) {
+                value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+            } else if (value.length > 2) {
+                value = value.replace(/(\d{2})(\d{0,5})/, '($1) $2');
+            } else if (value.length > 0) {
+                value = value.replace(/(\d{0,2})/, '($1');
+            }
+            
+            e.target.value = value;
+        });
+        
+        // Prevenção do envio do formulário (apenas frontend)
+        document.getElementById('careersForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Candidatura enviada com sucesso! (Esta é apenas uma demonstração frontend)');
+        });
+    </script>
+</body>
+</html>

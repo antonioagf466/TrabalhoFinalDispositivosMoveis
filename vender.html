@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender no Mercado Dibre</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <!-- Header -->
+    <header class="header-top">
+            <div class="header-container1">
+                <!-- Logo -->
+                <div class="brand-logo">
+                    <a href="index.html" aria-label="Página inicial">
+                        <img src="" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Barra de Pesquisa -->
+                <form class="search-form">
+                    <input type="text" placeholder="Buscar..." aria-label="Buscar produtos">
+                    <button type="submit" aria-label="Pesquisar">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <nav>
+                    <ul>
+                        <li class="dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-label="Menu usuário">
+                                <i class="bi bi-person"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Minha conta</a></li>
+                                <li><a class="dropdown-item" href="#">Compras</a></li>
+                                <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-link" href="#" aria-label="Carrinho de compras">
+                            <i class="bi bi-cart3"></i>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+                <!-- Ações -->
+                <div class="header-container2">
+                    <nav>
+                            <nav>
+                                <ul>
+                                    <li><a href="">Ofertas</a></li>
+                                    <li><a href="">Vender</a></li>
+                                    <li><a href="">Sobre Nós</a></li>
+                                    <li><a href="">Contato</a></li>
+                                    <li><a href="">Trabalhe Conosco</a></li>
+                    </nav>
+                </div>
+        </header>
+    <!-- Formulário de Venda -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="sell-container">
+                    <h1 class="sell-title">Publicar anúncio</h1>
+                    
+                    <form id="sellForm">
+                        <!-- Informações Básicas -->
+                        <h2 class="section-title">Informações básicas</h2>
+                        
+                        <div class="mb-4">
+                            <label for="productName" class="form-label">Título do anúncio</label>
+                            <input type="text" class="form-control" id="productName" placeholder="Ex: Notebook Dell Inspiron 15 Intel Core i5 8GB RAM">
+                            <div class="form-text">Escreva um título claro e descritivo. Use palavras-chave que ajudem na busca.</div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="productCategory" class="form-label">Categoria</label>
+                            <select class="form-select" id="productCategory">
+                                <option selected disabled>Selecione uma categoria</option>
+                                <option value="1">Tecnologia</option>
+                                <option value="2">Eletrodomésticos</option>
+                                <option value="3">Moda</option>
+                                <option value="4">Casa e Móveis</option>
+                                <option value="5">Esportes</option>
+                                <option value="6">Ferramentas</option>
+                                <option value="7">Brinquedos</option>
+                                <option value="8">Livros</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Imagens -->
+                        <h2 class="section-title">Imagens do produto</h2>
+                        
+                        <div class="mb-4">
+                            <div class="image-upload-area" id="imageUpload">
+                                <div class="upload-icon">
+                                    <i class="bi bi-cloud-arrow-up"></i>
+                                </div>
+                                <p class="upload-text">Arraste as imagens aqui ou clique para selecionar</p>
+                                <p class="upload-subtext">Máximo 12 imagens. Formatos: JPG, PNG. Tamanho máximo: 10MB cada.</p>
+                            </div>
+                            
+                            <input type="file" id="imageInput" multiple accept="image/*" style="display: none;">
+                            
+                            <div class="image-preview" id="imagePreview">
+                                <!-- As imagens selecionadas aparecerão aqui -->
+                            </div>
+                        </div>
+                        
+                        <!-- Preço -->
+                        <h2 class="section-title">Preço</h2>
+                        
+                        <div class="mb-4">
+                            <label for="productPrice" class="form-label">Preço</label>
+                            <div class="price-input">
+                                <span class="price-prefix">R$</span>
+                                <input type="number" class="form-control" id="productPrice" placeholder="0,00" step="0.01" min="0">
+                            </div>
+                            <div class="form-text">Defina um preço competitivo para vender mais rápido.</div>
+                        </div>
+                        
+                        <!-- Condição do Produto -->
+                        <h2 class="section-title">Condição do produto</h2>
+                        
+                        <div class="mb-4">
+                            <div class="condition-options">
+                                <div class="condition-option selected" data-condition="new">
+                                    <div class="condition-icon">
+                                        <i class="bi bi-tag"></i>
+                                    </div>
+                                    <div>Novo</div>
+                                </div>
+                                <div class="condition-option" data-condition="used">
+                                    <div class="condition-icon">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </div>
+                                    <div>Usado</div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="productCondition" value="new">
+                        </div>
+                        
+                        <!-- Descrição -->
+                        <h2 class="section-title">Descrição do produto</h2>
+                        
+                        <div class="mb-4">
+                            <label for="productDescription" class="form-label">Descrição detalhada</label>
+                            <textarea class="form-control" id="productDescription" rows="5" placeholder="Descreva seu produto com detalhes. Inclua informações sobre características, estado de conservação, acessórios inclusos, etc."></textarea>
+                            <div class="form-text">Quanto mais informações, mais chances de vender rápido.</div>
+                        </div>
+                        
+                        <!-- Estoque -->
+                        <h2 class="section-title">Estoque</h2>
+                        
+                        <div class="mb-4">
+                            <label for="productStock" class="form-label">Quantidade disponível</label>
+                            <input type="number" class="form-control" id="productStock" value="1" min="1">
+                        </div>
+                        
+                        <!-- Envio -->
+                        <h2 class="section-title">Opções de envio</h2>
+                        
+                        <div class="mb-4">
+                            <div class="form-check shipping-option">
+                                <input class="form-check-input" type="checkbox" id="shippingMercadoEnvios" checked>
+                                <label class="form-check-label" for="shippingMercadoEnvios">
+                                    Mercado Envios
+                                </label>
+                                <div class="form-text">Com Mercado Envios, seu produto chega a todo o Brasil de forma rápida e segura.</div>
+                            </div>
+                            
+                            <div class="form-check shipping-option">
+                                <input class="form-check-input" type="checkbox" id="shippingRetire">
+                                <label class="form-check-label" for="shippingRetire">
+                                    Retire na loja
+                                </label>
+                                <div class="form-text">Permita que o comprador retire o produto pessoalmente.</div>
+                            </div>
+                            
+                            <div class="form-check shipping-option">
+                                <input class="form-check-input" type="checkbox" id="shippingAcord">
+                                <label class="form-check-label" for="shippingAcord">
+                                    Acordo com o comprador
+                                </label>
+                                <div class="form-text">Combine diretamente com o comprador como será a entrega.</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Localização -->
+                        <h2 class="section-title">Localização</h2>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="productState" class="form-label">Estado</label>
+                                <select class="form-select" id="productState">
+                                    <option selected disabled>Selecione um estado</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="PR">Paraná</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="productCity" class="form-label">Cidade</label>
+                                <input type="text" class="form-control" id="productCity" placeholder="Cidade">
+                            </div>
+                        </div>
+                        
+                        <!-- Botões de Ação -->
+                        <div class="d-flex">
+                            <button type="button" class="btn btn-preview">Visualizar anúncio</button>
+                            <button type="submit" class="btn btn-publish">Publicar anúncio</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="tips-container">
+                    <h3 class="tips-title">Dicas para vender mais rápido</h3>
+                    <ul class="tips-list">
+                        <li>Use fotos de boa qualidade e bem iluminadas</li>
+                        <li>Inclua diferentes ângulos do produto</li>
+                        <li>Descreva detalhadamente o estado do produto</li>
+                        <li>Mencione possíveis defeitos ou marcas de uso</li>
+                        <li>Pesquise preços similares para definir um valor competitivo</li>
+                        <li>Responda rapidamente às perguntas dos compradores</li>
+                        <li>Ofereça diferentes opções de envio</li>
+                    </ul>
+                </div>
+                
+                <div class="tips-container mt-4">
+                    <h3 class="tips-title">O que não fazer</h3>
+                    <ul class="tips-list">
+                        <li>Não publique produtos proibidos ou ilegais</li>
+                        <li>Não use fotos de outros vendedores</li>
+                        <li>Não inclua informações de contato no anúncio</li>
+                        <li>Não tente realizar vendas fora da plataforma</li>
+                        <li>Não defina preços abusivos para o frete</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-sections">
+                <!-- Seção 1 -->
+                <div class="footer-section">
+                    <h6>Informações</h6>
+                    <div class="footer-links">
+                        <a href="#">Sobre nós</a>
+                        <a href="#">Contato</a>
+                        <a href="#">Política de privacidade</a>
+                        <a href="#">Termos e condições</a>
+                    </div>
+                </div>
+
+                <!-- Seção 2 -->
+                <div class="footer-section">
+                    <h6>Minha conta</h6>
+                    <div class="footer-links">
+                        <a href="#">Entrar</a>
+                        <a href="#">Meus pedidos</a>
+                        <a href="#">Lista de desejos</a>
+                        <a href="#">Histórico</a>
+                    </div>
+                </div>
+
+                <!-- Seção 3 -->
+                <div class="footer-section">
+                    <h6>Atendimento</h6>
+                    <div class="footer-links">
+                        <a href="#">Ajuda</a>
+                        <a href="#">Frete</a>
+                        <a href="#">Trocas</a>
+                        <a href="#">Devoluções</a>
+                    </div>
+                </div>
+
+                <!-- Seção 4 -->
+                <div class="footer-section">
+                    <h6>Redes sociais</h6>
+                    <div class="footer-links">
+                        <a href="#"><i class="bi bi-facebook"></i> Facebook</a>
+                        <a href="#"><i class="bi bi-twitter"></i> Twitter</a>
+                        <a href="#"><i class="bi bi-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>© 2023 Mercado Dibre - Todos os direitos reservados</p>
+            </div>
+        </footer>
+</div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Seleção da condição do produto
+        document.querySelectorAll('.condition-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.condition-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                option.classList.add('selected');
+                document.getElementById('productCondition').value = option.getAttribute('data-condition');
+            });
+        });
+        
+        // Upload de imagens
+        const imageUpload = document.getElementById('imageUpload');
+        const imageInput = document.getElementById('imageInput');
+        const imagePreview = document.getElementById('imagePreview');
+        
+        imageUpload.addEventListener('click', () => {
+            imageInput.click();
+        });
+        
+        imageInput.addEventListener('change', (e) => {
+            const files = e.target.files;
+            
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                
+                if (!file.type.match('image.*')) continue;
+                
+                const reader = new FileReader();
+                
+                reader.onload = (e) => {
+                    const previewItem = document.createElement('div');
+                    previewItem.className = 'preview-item';
+                    
+                    const img = document.createElement('img');
+                    img.className = 'preview-image';
+                    img.src = e.target.result;
+                    
+                    const removeBtn = document.createElement('button');
+                    removeBtn.className = 'remove-image';
+                    removeBtn.innerHTML = '×';
+                    removeBtn.addEventListener('click', () => {
+                        previewItem.remove();
+                    });
+                    
+                    previewItem.appendChild(img);
+                    previewItem.appendChild(removeBtn);
+                    imagePreview.appendChild(previewItem);
+                };
+                
+                reader.readAsDataURL(file);
+            }
+            
+            // Limpa o input para permitir selecionar as mesmas imagens novamente
+            imageInput.value = '';
+        });
+        
+        // Prevenção do envio do formulário (apenas frontend)
+        document.getElementById('sellForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Formulário enviado com sucesso! (Esta é apenas uma demonstração frontend)');
+        });
+    </script>
+</body>
+</html>

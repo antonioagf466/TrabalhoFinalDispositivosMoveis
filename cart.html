@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho de Compras - Mercado Livre</title>
+    <title>Carrinho de Compras - Mercado Dibre</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="cart.css">
-    <link rel="stylesheet" href="HeaderFooterStyle.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -18,7 +17,7 @@
                 <!-- Logo -->
                 <div class="brand-logo">
                     <a href="index.html" aria-label="Página inicial">
-                        <img src="" alt="Logo">
+                        <img src="images/ronaldinho-removebg-preview.png" alt="Logo">
                     </a>
                 </div>
 
@@ -35,9 +34,9 @@
                                 <i class="bi bi-person"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Minha conta</a></li>
-                                <li><a class="dropdown-item" href="#">Compras</a></li>
-                                <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                                <li><a class="dropdown-item" href="conta.html">Minha conta</a></li>
+                                <li><a class="dropdown-item" href="compras.html">Compras</a></li>
+                                <li><a class="dropdown-item" href="favoritos.html">Favoritos</a></li>
                             </ul>
                         </li>
                         <li><a class="nav-link" href="cart.html" aria-label="Carrinho de compras">
@@ -59,16 +58,6 @@
                     </nav>
                 </div>
         </header>
-    <!-- Breadcrumb -->
-    <div class="container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Mercado Livre</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Carrinho</li>
-            </ol>
-        </nav>
-    </div>
-
     <!-- Carrinho -->
     <div class="container">
         <div class="row">
@@ -78,9 +67,13 @@
                     
                     <!-- Item 1 -->
                     <div class="cart-item">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_762411-MLA74974447497_032024-F.webp" alt="Produto 1" class="item-image">
+                        <a href="produto.html" class="item-link">
+                            <img src="images/cell.jpg" alt="Produto 1" class="item-image">
+                        </a>
                         <div class="item-details">
-                            <h3 class="item-title">Smartphone Samsung Galaxy A54 5G 128GB 8GB RAM</h3>
+                            <a href="produto.html" class="item-title-link">
+                                <h3 class="item-title">Smartphone Samsung Galaxy A54 5G 128GB 8GB RAM</h3>
+                            </a>
                             <p class="item-seller">Vendido por: EletroShop</p>
                             <p class="item-price">R$ 1.499</p>
                             
@@ -99,9 +92,13 @@
                     
                     <!-- Item 2 -->
                     <div class="cart-item">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_843557-MLA74974447498_032024-F.webp" alt="Produto 2" class="item-image">
+                        <a href="produto.html" class="item-link">
+                            <img src="images/notebook.png" alt="Produto 2" class="item-image">
+                        </a>
                         <div class="item-details">
-                            <h3 class="item-title">Notebook Dell Inspiron 15 3520 Intel Core i5 8GB 256GB SSD</h3>
+                            <a href="produto.html" class="item-title-link">
+                                <h3 class="item-title">Notebook Dell Inspiron 15 3520 Intel Core i5 8GB 256GB SSD</h3>
+                            </a>
                             <p class="item-seller">Vendido por: TechStore</p>
                             <p class="item-price">R$ 2.799</p>
                             
@@ -120,9 +117,13 @@
                     
                     <!-- Item 3 -->
                     <div class="cart-item">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_729418-MLA74974447499_032024-F.webp" alt="Produto 3" class="item-image">
+                        <a href="produto.html" class="item-link">
+                            <img src="images/frita.jpg" alt="Produto 3" class="item-image">
+                        </a>
                         <div class="item-details">
-                            <h3 class="item-title">Fritadeira Elétrica Sem Óleo Air Fryer Mondial 4,2L</h3>
+                            <a href="produto.html" class="item-title-link">
+                                <h3 class="item-title">Fritadeira Elétrica Sem Óleo Air Fryer Mondial 4,2L</h3>
+                            </a>
                             <p class="item-seller">Vendido por: Casa & Cozinha</p>
                             <p class="item-price">R$ 329</p>
                             
@@ -174,48 +175,56 @@
         <h2 class="suggestions-title">Quem viu este produto também se interessou por</h2>
         <div class="row">
             <div class="col-6 col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_972355-MLA74974447500_032024-F.webp" class="card-img-top" alt="Produto Sugerido 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Tênis Nike Revolution 6 Next Nature Masculino</h5>
-                        <p class="price">R$ 249</p>
-                        <p class="discount">30% OFF</p>
-                        <p class="shipping">Frete grátis</p>
+                <a href="produto.html" class="card-link">
+                    <div class="card">
+                        <img src="images/tennis.jpg" class="card-img-top" alt="Produto Sugerido 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Tênis Nike Revolution 6 Next Nature Masculino</h5>
+                            <p class="price">R$ 249</p>
+                            <p class="discount">30% OFF</p>
+                            <p class="shipping">Frete grátis</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-6 col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_705033-MLA74974447501_032024-F.webp" class="card-img-top" alt="Produto Sugerido 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Cafeteira Expresso Dolce Gusto Mini Me Preta 110V</h5>
-                        <p class="price">R$ 399</p>
-                        <p class="discount">25% OFF</p>
-                        <p class="shipping">Frete grátis</p>
+                <a href="produto.html" class="card-link">
+                    <div class="card">
+                        <img src="images/dolce.png" class="card-img-top" alt="Produto Sugerido 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Cafeteira Expresso Dolce Gusto Mini Me Preta 110V</h5>
+                            <p class="price">R$ 399</p>
+                            <p class="discount">25% OFF</p>
+                            <p class="shipping">Frete grátis</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-6 col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_600235-MLA74974447502_032024-F.webp" class="card-img-top" alt="Produto Sugerido 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Mouse Gamer Logitech G203 Lightsync RGB 8000 DPI</h5>
-                        <p class="price">R$ 149</p>
-                        <p class="discount">15% OFF</p>
-                        <p class="shipping">Frete grátis</p>
+                <a href="produto.html" class="card-link">
+                    <div class="card">
+                        <img src="images/mouselogi.jpg" class="card-img-top" alt="Produto Sugerido 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Mouse Gamer Logitech G203 Lightsync RGB 8000 DPI</h5>
+                            <p class="price">R$ 149</p>
+                            <p class="discount">15% OFF</p>
+                            <p class="shipping">Frete grátis</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-6 col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_905851-MLA74974447503_032024-F.webp" class="card-img-top" alt="Produto Sugerido 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Fone de Ouvido Bluetooth JBL Tune 510BT</h5>
-                        <p class="price">R$ 199</p>
-                        <p class="discount">20% OFF</p>
-                        <p class="shipping">Frete grátis</p>
+                <a href="produto.html" class="card-link">
+                    <div class="card">
+                        <img src="images/jblfone.jpg" class="card-img-top" alt="Produto Sugerido 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Fone de Ouvido Bluetooth JBL Tune 510BT</h5>
+                            <p class="price">R$ 199</p>
+                            <p class="discount">20% OFF</p>
+                            <p class="shipping">Frete grátis</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>

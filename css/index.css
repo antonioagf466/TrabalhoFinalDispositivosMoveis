@@ -1,0 +1,143 @@
+/* ========== INDEX/HOME PAGE SPECIFIC STYLES ========== */
+
+.section-title {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-md);
+    color: var(--text-dark);
+}
+
+/* ========== CAROUSEL ========== */
+.carousel-item {
+    height: 350px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+/* ========== CARDS ========== */
+.card,
+.card-link {
+    border: none;
+    border-radius: 6px;
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.card {
+    display: block;
+}
+
+.card:hover,
+.card-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.card-title {
+    color: var(--text-dark);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 40px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.price {
+    font-weight: 400;
+    color: var(--text-dark);
+}
+
+.discount {
+    color: var(--success);
+}
+
+.shipping {
+    color: var(--success);
+    font-weight: 600;
+}
+
+/* ========== CATEGORIES ========== */
+.categories-nav {
+    padding: 0;
+}
+
+.categories-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.categories-item {
+    margin: 0;
+    padding: 0;
+}
+
+.category-item {
+    text-align: center;
+    margin-bottom: 0;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.category-item small {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (min-width: 465px) {
+    .categories-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 660px) {
+    .categories-list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (min-width: 800px) {
+    .categories-list {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 30px;
+    }
+}

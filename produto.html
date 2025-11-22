@@ -8,10 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/produto.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header-top">
+   <header class="header-top">
             <div class="header-container1">
                 <!-- Logo -->
                 <div class="brand-logo">
@@ -21,7 +22,7 @@
                 </div>
 
                 <!-- Barra de Pesquisa -->
-                <form class="search-form">
+                <form class="search-form" action="#">
                     <input type="text" placeholder="Buscar..." aria-label="Buscar produtos">
                     <button type="submit" aria-label="Pesquisar">
                         <i class="bi bi-search"></i>
@@ -44,19 +45,24 @@
                     </ul>
                 </nav>
             </div>
+                <!-- Hamburguer Menu Button -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu de navegação">
+                    <i class="bi bi-list"></i>
+                </button>
                 <!-- Ações -->
-                <div class="header-container2">
+                <div class="header-container2" id="headerMenu">
                     <nav>
-                            <nav>
                                 <ul>
                                     <li><a href="categorias.html">Categorias</a></li>
                                     <li><a href="vender.html">Vender</a></li>
                                     <li><a href="sobrenos.html">Sobre Nós</a></li>
                                     <li><a href="contato.html">Contato</a></li>
                                     <li><a href="trabalhe.html">Trabalhe Conosco</a></li>
+                                </ul>
                     </nav>
                 </div>
         </header>
+
     <!-- Produto -->
     <div class="container">
         <div class="product-container">
@@ -217,60 +223,62 @@
         
         <!-- Produtos Sugeridos -->
         <h2 class="suggestions-title">Quem viu este produto também se interessou por</h2>
-        <div class="row">
-            <div class="col-6 col-md-3 mb-4">
-                <a href="produto.html" class="card-link">
-                    <div class="card">
-                        <img src="images/cell.jpg" class="card-img-top" alt="Smartphone Samsung">
-                        <div class="card-body">
-                            <h5 class="card-title">Smartphone Samsung Galaxy A54</h5>
-                            <p class="price">R$ 1.499</p>
-                            <p class="discount">12% OFF</p>
-                            <p class="shipping">Frete grátis</p>
+        <nav class="suggestions-nav" aria-label="Produtos sugeridos">
+            <ul class="suggestions-list">
+                <li class="suggestions-item">
+                    <a href="produto.html" class="card-link">
+                        <div class="card">
+                            <img src="images/cell.jpg" class="card-img-top" alt="Smartphone Samsung">
+                            <div class="card-body">
+                                <h5 class="card-title">Smartphone Samsung Galaxy A54</h5>
+                                <p class="price">R$ 1.499</p>
+                                <p class="discount">12% OFF</p>
+                                <p class="shipping">Frete grátis</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-3 mb-4">
-                <a href="produto.html" class="card-link">
-                    <div class="card">
-                        <img src="images/tvsmart.jpg" class="card-img-top" alt="Smart TV Samsung">
-                        <div class="card-body">
-                            <h5 class="card-title">Smart TV LED 50" 4K</h5>
-                            <p class="price">R$ 2.299</p>
-                            <p class="discount">15% OFF</p>
-                            <p class="shipping">Frete grátis</p>
+                    </a>
+                </li>
+                <li class="suggestions-item">
+                    <a href="produto.html" class="card-link">
+                        <div class="card">
+                            <img src="images/tvsmart.jpg" class="card-img-top" alt="Smart TV Samsung">
+                            <div class="card-body">
+                                <h5 class="card-title">Smart TV LED 55" 4K Multi</h5>
+                                <p class="price">R$ 2.299</p>
+                                <p class="discount">15% OFF</p>
+                                <p class="shipping">Frete grátis</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-3 mb-4">
-                <a href="produto.html" class="card-link">
-                    <div class="card">
-                        <img src="images/mouselogi.jpg" class="card-img-top" alt="Mouse Gamer">
-                        <div class="card-body">
-                            <h5 class="card-title">Mouse Gamer Logitech G203</h5>
-                            <p class="price">R$ 149</p>
-                            <p class="discount">15% OFF</p>
-                            <p class="shipping">Frete grátis</p>
+                    </a>
+                </li>
+                <li class="suggestions-item">
+                    <a href="produto.html" class="card-link">
+                        <div class="card">
+                            <img src="images/mouselogi.jpg" class="card-img-top" alt="Mouse Gamer">
+                            <div class="card-body">
+                                <h5 class="card-title">Mouse Gamer Logitech G203</h5>
+                                <p class="price">R$ 149</p>
+                                <p class="discount">15% OFF</p>
+                                <p class="shipping">Frete grátis</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-3 mb-4">
-                <a href="produto.html" class="card-link">
-                    <div class="card">
-                        <img src="images/jblfone.jpg" class="card-img-top" alt="Fone Bluetooth">
-                        <div class="card-body">
-                            <h5 class="card-title">Fone de Ouvido Bluetooth JBL Tune</h5>
-                            <p class="price">R$ 199</p>
-                            <p class="discount">20% OFF</p>
-                            <p class="shipping">Frete grátis</p>
+                    </a>
+                </li>
+                <li class="suggestions-item">
+                    <a href="produto.html" class="card-link">
+                        <div class="card">
+                            <img src="images/jblfone.jpg" class="card-img-top" alt="Fone Bluetooth">
+                            <div class="card-body">
+                                <h5 class="card-title">Fone de Ouvido Bluetooth JBL Tune</h5>
+                                <p class="price">R$ 199</p>
+                                <p class="discount">20% OFF</p>
+                                <p class="shipping">Frete grátis</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
         <!-- Footer -->

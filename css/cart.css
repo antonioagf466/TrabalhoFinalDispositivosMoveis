@@ -1,0 +1,139 @@
+/* ========== CART PAGE SPECIFIC STYLES ========== */
+
+.cart-item {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+.item-link,
+.item-title-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-link:hover,
+.item-title-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-title-link:hover .item-title {
+    color: var(--blue-primary);
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-title {
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.item-seller {
+    color: var(--text-gray);
+    margin-bottom: 10px;
+}
+
+.item-price {
+    font-weight: 400;
+    color: var(--text-dark);
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background-color: var(--bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.quantity-input {
+    width: 50px;
+    height: 30px;
+    border: 1px solid #ddd;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.item-actions {
+    display: flex;
+    margin-top: 15px;
+}
+
+.action-link {
+    color: var(--blue-primary);
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.summary-title {
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.summary-total {
+    font-weight: 600;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.payment-methods {
+    margin-top: 20px;
+    color: var(--success);
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.empty-cart-icon {
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.empty-cart-title {
+    color: var(--text-gray);
+    margin-bottom: 10px;
+}
+
+.empty-cart-text {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.suggestions-title {
+    font-weight: 400;
+    margin: 30px 0 20px;
+    color: var(--text-dark);
+}

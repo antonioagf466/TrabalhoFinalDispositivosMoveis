@@ -1,5 +1,30 @@
 // FAQ Toggle - contato.html
 document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger Menu Toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const headerMenu = document.getElementById('headerMenu');
+    
+    if (hamburgerBtn && headerMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            headerMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const menuLinks = headerMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                headerMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.header-top')) {
+                headerMenu.classList.remove('active');
+            }
+        });
+    }
+
     const faqQuestions = document.querySelectorAll('.faq-question');
     if (faqQuestions.length > 0) {
         faqQuestions.forEach(question => {

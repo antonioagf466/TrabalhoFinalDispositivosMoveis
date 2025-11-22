@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
                 </div>
 
                 <!-- Barra de Pesquisa -->
-                <form class="search-form">
+                <form class="search-form" action="#">
                     <input type="text" placeholder="Buscar..." aria-label="Buscar produtos">
                     <button type="submit" aria-label="Pesquisar">
                         <i class="bi bi-search"></i>
@@ -43,19 +44,24 @@
                     </ul>
                 </nav>
             </div>
+                <!-- Hamburguer Menu Button -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu de navegação">
+                    <i class="bi bi-list"></i>
+                </button>
                 <!-- Ações -->
-                <div class="header-container2">
+                <div class="header-container2" id="headerMenu">
                     <nav>
-                            <nav>
                                 <ul>
                                     <li><a href="categorias.html">Categorias</a></li>
                                     <li><a href="vender.html">Vender</a></li>
                                     <li><a href="sobrenos.html">Sobre Nós</a></li>
                                     <li><a href="contato.html">Contato</a></li>
                                     <li><a href="trabalhe.html">Trabalhe Conosco</a></li>
+                                </ul>
                     </nav>
                 </div>
         </header>
+
 
     <!-- Carousel -->
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -84,58 +90,58 @@
     </div>
 
     <!-- Categorias -->
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-6 col-sm-4 col-md-2">
+    <nav class="categories-nav container mt-4" aria-label="Categorias de produtos">
+        <ul class="categories-list">
+            <li class="categories-item">
                 <a href="produto.html" class="category-item">
                     <div class="category-icon">
                         <i class="bi bi-phone text-primary"></i>
                     </div>
                     <small>Celulares</small>
                 </a>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
+            </li>
+            <li class="categories-item">
                 <a href="produto.html" class="category-item">
                     <div class="category-icon">
                         <i class="bi bi-laptop text-primary"></i>
                     </div>
                     <small>Informática</small>
                 </a>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
+            </li>
+            <li class="categories-item">
                 <a href="produto.html" class="category-item">
                     <div class="category-icon">
                         <i class="bi bi-tv text-primary"></i>
                     </div>
                     <small>Eletro</small>
                 </a>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
+            </li>
+            <li class="categories-item">
                 <a href="produto.html" class="category-item">
                     <div class="category-icon">
                         <i class="bi bi-bag text-primary"></i>
                     </div>
                     <small>Moda</small>
                 </a>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
+            </li>
+            <li class="categories-item">
                 <a href="produto.html" class="category-item">
                     <div class="category-icon">
                         <i class="bi bi-house text-primary"></i>
                     </div>
                     <small>Casa</small>
                 </a>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
+            </li>
+            <li class="categories-item">
                 <a href="produto.html" class="category-item">
                     <div class="category-icon">
                         <i class="bi bi-controller text-primary"></i>
                     </div>
                     <small>Games</small>
                 </a>
-            </div>
-        </div>
-    </div>
+            </li>
+        </ul>
+    </nav>
 
     <!-- Produtos em Destaque -->
     <div class="container mt-5">
@@ -311,5 +317,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

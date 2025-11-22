@@ -1,0 +1,50 @@
+   <header class="header-top">
+            <div class="header-container1">
+                <!-- Logo -->
+                <div class="brand-logo">
+                    <a href="index.html" aria-label="Página inicial">
+                        <img src="images/ronaldinho-removebg-preview.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Barra de Pesquisa -->
+                <form class="search-form">
+                    <input type="text" placeholder="Buscar..." aria-label="Buscar produtos">
+                    <button type="submit" aria-label="Pesquisar">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <nav>
+                    <ul>
+                        <li class="dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-label="Menu usuário">
+                                <i class="bi bi-person"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="conta.html">Minha conta</a></li>
+                                <li><a class="dropdown-item" href="compras.html">Compras</a></li>
+                                <li><a class="dropdown-item" href="favoritos.html">Favoritos</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-link" href="cart.html" aria-label="Carrinho de compras">
+                            <i class="bi bi-cart3"></i>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+                <!-- Hamburguer Menu Button -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu de navegação">
+                    <i class="bi bi-list"></i>
+                </button>
+                <!-- Ações -->
+                <div class="header-container2" id="headerMenu">
+                    <nav>
+                                <ul>
+                                    <li><a href="categorias.html">Categorias</a></li>
+                                    <li><a href="vender.html">Vender</a></li>
+                                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                                    <li><a href="contato.html">Contato</a></li>
+                                    <li><a href="trabalhe.html">Trabalhe Conosco</a></li>
+                                </ul>
+                    </nav>
+                </div>
+        </header>

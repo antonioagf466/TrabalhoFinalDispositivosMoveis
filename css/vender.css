@@ -1,0 +1,206 @@
+/* ========== SELL PAGE SPECIFIC STYLES ========== */
+
+.sell-container {
+    padding: 30px;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.form-control,
+.form-select {
+    border-radius: 4px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-light);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--blue-primary);
+    box-shadow: 0 0 0 0.2rem rgba(52, 131, 250, 0.25);
+}
+
+.form-text {
+    color: var(--text-gray);
+}
+
+.image-upload-area,
+.file-upload-area {
+    border: 2px dashed var(--border-light);
+    border-radius: 6px;
+    padding: 30px 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.image-upload-area:hover,
+.file-upload-area:hover {
+    border-color: var(--blue-primary);
+}
+
+.image-upload-area {
+    padding: 40px 20px;
+}
+
+.upload-icon {
+    color: var(--border-light);
+    margin-bottom: 15px;
+}
+
+.upload-text {
+    color: var(--text-gray);
+    margin-bottom: 5px;
+}
+
+.upload-subtext {
+    color: var(--text-light);
+}
+
+.image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.preview-item {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.remove-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--text-white);
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.price-input {
+    position: relative;
+}
+
+.price-prefix {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+}
+
+.price-input .form-control {
+    padding-left: 30px;
+}
+
+.condition-options {
+    display: flex;
+    gap: 20px;
+}
+
+.condition-option {
+    flex: 1;
+    border: 2px solid #eee;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.condition-option.selected {
+    border-color: var(--blue-primary);
+    background-color: rgba(52, 131, 250, 0.05);
+}
+
+.condition-icon {
+    margin-bottom: 10px;
+    color: var(--text-gray);
+}
+
+.condition-option.selected .condition-icon {
+    color: var(--blue-primary);
+}
+
+.shipping-options {
+    margin-top: 10px;
+}
+
+.shipping-option {
+    margin-bottom: 10px;
+}
+
+.form-check-input:checked {
+    background-color: var(--blue-primary);
+    border-color: var(--blue-primary);
+}
+
+.btn-preview {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    border: 1px solid var(--border-light);
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.btn-preview:hover {
+    background-color: #e9ecef;
+}
+
+.tips-container {
+    background-color: var(--bg-light);
+    border-radius: 6px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.tips-title {
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.tips-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tips-list li {
+    padding: 8px 0;
+    color: var(--text-gray);
+}
+
+.tips-list li:before {
+    content: "•";
+    color: var(--blue-primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}

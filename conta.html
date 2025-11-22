@@ -24,12 +24,12 @@
             <input type="checkbox" id="toggle-create" class="toggle-create">
 
             <div class="login-fields">
-
+            <!--Não posso utilizar required nos campos do formulario-->
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
 
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" required>
+                <input type="password" id="senha" name="senha">
 
                 <button type="submit" class="btn-login">Continuar</button>
 
@@ -48,14 +48,16 @@
                 <input type="password" id="senha_cadastro" name="senha_cadastro">
 
                 <label for="telefone">Telefone</label>
-                <input 
-                    type="tel"
+                <input
+                    type="text"
                     id="telefone"
                     name="telefone"
                     placeholder="DDD + número"
-                    pattern="[0-9]+"
+                    pattern="[0-9]{10,11}"
                     inputmode="numeric"
                     maxlength="11"
+                    title="Digite apenas números"
+                    required
                 >
 
                 <label for="nome">Nome</label>

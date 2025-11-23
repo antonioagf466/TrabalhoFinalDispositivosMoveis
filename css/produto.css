@@ -266,6 +266,30 @@
     padding: 0;
 }
 
+/* ========== CARD STYLES ========== */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100px;
+}
+
+.card-title {
+    flex-grow: 1;
+}
+
+.price,
+.discount,
+.shipping {
+    margin: 4px 0;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (min-width: 465px) {
     .suggestions-list {

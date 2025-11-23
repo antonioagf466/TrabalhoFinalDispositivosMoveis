@@ -216,3 +216,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Copy Coupon - cupons.html
+window.copiarCupom = function(codigo) {
+    navigator.clipboard.writeText(codigo).then(() => {
+        alert("Cupom copiado: " + codigo);
+    }).catch(() => {
+        alert("Não foi possível copiar o cupom.");
+    });
+};

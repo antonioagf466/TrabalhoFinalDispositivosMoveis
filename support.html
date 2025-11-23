@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central de Suporte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/support.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header class="header-top">
+            <div class="header-container1">
+                <!-- Logo -->
+                <div class="brand-logo">
+                    <a href="index.html" aria-label="Página inicial">
+                        <img src="images/ronaldinho-removebg-preview.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Barra de Pesquisa -->
+                <form class="search-form" action="#">
+                    <input type="text" placeholder="Buscar..." aria-label="Buscar produtos">
+                    <button type="submit" aria-label="Pesquisar">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <nav>
+                    <ul>
+                        <li class="dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-label="Menu usuário">
+                                <i class="bi bi-person"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="conta.html">Minha conta</a></li>
+                                <li><a class="dropdown-item" href="compras.html">Compras</a></li>
+                                <li><a class="dropdown-item" href="favoritos.html">Favoritos</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-link" href="cart.html" aria-label="Carrinho de compras">
+                            <i class="bi bi-cart3"></i>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+                <!-- Hamburguer Menu Button -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu de navegação">
+                    <i class="bi bi-list"></i>
+                </button>
+                <!-- Ações -->
+                <div class="header-container2" id="headerMenu">
+                    <nav>
+                                <ul>
+                                    <li><a href="categorias.html">Categorias</a></li>
+                                    <li><a href="vender.html">Vender</a></li>
+                                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                                    <li><a href="support.html">Contato</a></li>
+                                    <li><a href="trabalhe.html">Trabalhe Conosco</a></li>
+                                </ul>
+                    </nav>
+                </div>
+        </header>
+
+    <main class="conteudo">
+      <div class="container">
+
+        <!-- HERO / BARRA DE BUSCA PRINCIPAL -->
+        <section class="heroi">
+          <div class="heroi-fundo">
+            <h2 class="heroi-titulo">Encontre respostas rápidas e suporte para suas compras e vendas.</h2>
+
+            <form class="form-busca" action="#" onsubmit="return false;">
+              <div class="campo-entrada">
+                <div class="icone-entrada"><span class="material-symbols-outlined">search</span></div>
+                <input type="search" placeholder="Como podemos te ajudar?" aria-label="como podemos te ajudar">
+                <button class="btn-buscar">Buscar</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- CATEGORIAS -->
+        <section class="categorias">
+          <h3 class="secao-titulo">Principais categorias de ajuda</h3>
+
+          <div class="grade-cards">
+            <article class="card">
+              <div class="icone-card"><span class="material-symbols-outlined">inventory_2</span></div>
+              <h4 class="card-titulo">Meus Pedidos</h4>
+              <p class="card-texto">Gerencie seus pedidos e acompanhe o status.</p>
+            </article>
+
+            <article class="card">
+              <div class="icone-card"><span class="material-symbols-outlined">local_shipping</span></div>
+              <h4 class="card-titulo">Entregas</h4>
+              <p class="card-texto">Informações sobre prazos, custos e rastreamento.</p>
+            </article>
+
+            <article class="card">
+              <div class="icone-card"><span class="material-symbols-outlined">payment</span></div>
+              <h4 class="card-titulo">Pagamentos</h4>
+              <p class="card-texto">Ajuda com cartões, boletos e pagamentos.</p>
+            </article>
+
+            <article class="card">
+              <div class="icone-card"><span class="material-symbols-outlined">assignment_return</span></div>
+              <h4 class="card-titulo">Devoluções e Reembolsos</h4>
+              <p class="card-texto">Saiba como devolver um produto e receber seu dinheiro.</p>
+            </article>
+
+            <article class="card">
+              <div class="icone-card"><span class="material-symbols-outlined">admin_panel_settings</span></div>
+              <h4 class="card-titulo">Segurança da Conta</h4>
+              <p class="card-texto">Proteja sua conta e dados pessoais.</p>
+            </article>
+
+            <article class="card">
+              <div class="icone-card"><span class="material-symbols-outlined">sell</span></div>
+              <h4 class="card-titulo">Vendas e Anúncios</h4>
+              <p class="card-texto">Dicas e regras para vender e anunciar.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ARTIGOS POPULARES -->
+        <section class="artigos">
+          <h3 class="secao-titulo">Artigos populares</h3>
+          <ul class="lista-artigos">
+            <li><a href="#"><span class="material-symbols-outlined">chevron_right</span> Como rastrear meu pedido?</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">chevron_right</span> Qual é a política de devolução?</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">chevron_right</span> Como alterar minha senha?</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">chevron_right</span> Formas de pagamento aceitas</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">chevron_right</span> Problemas com um pagamento</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">chevron_right</span> Como vender na plataforma?</a></li>
+          </ul>
+        </section>
+
+        <!-- FAQ -->
+        <section class="perguntas">
+          <h3 class="secao-titulo">Perguntas Frequentes</h3>
+
+          <div class="lista-perguntas">
+            <details open class="pergunta">
+              <summary class="pergunta-titulo">
+                <span>Como posso pagar pela minha compra?</span>
+                <span class="material-symbols-outlined setinha">expand_more</span>
+              </summary>
+              <div class="pergunta-resposta">
+                <p>Aceitamos uma variedade de métodos de pagamento, incluindo cartões de crédito (Visa, MasterCard, American Express), cartões de débito, boleto bancário e PIX. Todos os pagamentos são processados de forma segura.</p>
+              </div>
+            </details>
+
+            <details class="pergunta">
+              <summary class="pergunta-titulo">
+                <span>Qual é o prazo de entrega?</span>
+                <span class="material-symbols-outlined setinha">expand_more</span>
+              </summary>
+              <div class="pergunta-resposta">
+                <p>O prazo de entrega varia dependendo da sua localização e do vendedor. Você pode ver uma estimativa do prazo de entrega na página do produto e durante o checkout.</p>
+              </div>
+            </details>
+
+            <details class="pergunta">
+              <summary class="pergunta-titulo">
+                <span>Posso cancelar ou alterar meu pedido?</span>
+                <span class="material-symbols-outlined setinha">expand_more</span>
+              </summary>
+              <div class="pergunta-resposta">
+                <p>Se o seu pedido ainda não foi enviado, você pode solicitar o cancelamento através da seção "Meus Pedidos". Se já foi enviado, inicie o processo de devolução após a entrega.</p>
+              </div>
+            </details>
+
+            <details class="pergunta">
+              <summary class="pergunta-titulo">
+                <span>Como faço para devolver um produto?</span>
+                <span class="material-symbols-outlined setinha">expand_more</span>
+              </summary>
+              <div class="pergunta-resposta">
+                <p>Acesse "Meus Pedidos", selecione o pedido e clique em "Solicitar devolução". Siga as instruções para gerar etiqueta e enviar o produto.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="cta-contato">
+            <p>Não encontrou o que procurava?</p>
+            <button class="btn-contato">Falar com o Suporte</button>
+          </div>
+        </section>
+
+      </div>
+    </main>
+            <footer class="footer">
+            <div class="footer-sections">
+                <!-- Seção 1 -->
+                <div class="footer-section">
+                    <h6>Informações</h6>
+                    <div class="footer-links">
+                        <a href="sobrenos.html">Sobre nós</a>
+                        <a href="support.html">Contato</a>
+                        <a href="support.html">Política de privacidade</a>
+                        <a href="support.html">Termos e condições</a>
+                    </div>
+                </div>
+
+                <!-- Seção 2 -->
+                <div class="footer-section">
+                    <h6>Minha conta</h6>
+                    <div class="footer-links">
+                        <a href="conta.html">Entrar</a>
+                        <a href="compras.html">Meus pedidos</a>
+                        <a href="favoritos.html">Lista de desejos</a>
+                        <a href="compras.html">Histórico</a>
+                    </div>
+                </div>
+
+                <!-- Seção 3 -->
+                <div class="footer-section">
+                    <h6>Atendimento</h6>
+                    <div class="footer-links">
+                        <a href="support.html">Ajuda</a>
+                        <a href="support.html">Frete</a>
+                        <a href="support.html">Trocas</a>
+                        <a href="support.html">Devoluções</a>
+                    </div>
+                </div>
+
+                <!-- Seção 4 -->
+                <div class="footer-section">
+                    <h6>Redes sociais</h6>
+                    <div class="footer-links">
+                        <a href="https://www.facebook.com"><i class="bi bi-facebook"></i> Facebook</a>
+                        <a href="https://x.com/home"><i class="bi bi-twitter"></i> Twitter</a>
+                        <a href="https://www.instagram.com"><i class="bi bi-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>© 2023 Mercado Dibre - Todos os direitos reservados</p>
+            </div>
+        </footer>
+
+  </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

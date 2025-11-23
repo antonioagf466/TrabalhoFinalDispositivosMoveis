@@ -58,7 +58,7 @@
                             Vence em sexta-feira
                         </div>
 
-                        <button class="botao-acao">Usar cupom</button>
+                        <button class="botao-acao" onclick="copiarCupom('DESCONTADEZ')">Usar cupom</button>
                     </div>
 
                 </div>
@@ -101,7 +101,7 @@
                             Vence em 3 dias
                         </div>
 
-                        <button class="botao-acao">Usar cupom</button>
+                        <button class="botao-acao" onclick="copiarCupom('ELETRON50')">Usar cupom</button>
                     </div>
 
                 </div>
@@ -144,7 +144,7 @@
                             Vence amanhã
                         </div>
 
-                        <button class="botao-acao">Usar cupom</button>
+                        <button class="botao-acao" onclick="copiarCupom('ALIM15')">Usar cupom</button>
                     </div>
 
                 </div>
@@ -174,7 +174,7 @@
                             </div>
                         </div>
 
-                        <div class="cupom-codigo">GAME20</div>
+                        <div class="cupom-codigo">GAME8</div>
                     </div>
 
                     <div class="cupom-divider-container">
@@ -187,7 +187,7 @@
                             Vence em 12 dias
                         </div>
 
-                        <button class="botao-acao">Usar cupom</button>
+                        <button class="botao-acao" onclick="copiarCupom('GAME8')">Usar cupom</button>
                     </div>
 
                 </div>
@@ -230,7 +230,7 @@
                             Expira em 5 dias
                         </div>
 
-                        <button class="botao-acao">Usar cupom</button>
+                        <button class="botao-acao" onclick="copiarCupom('MOVEIS12')">Usar cupom</button>
                     </div>
                 </div>
             </div>
@@ -238,5 +238,15 @@
     </main>
     </div>
 
+    <script>
+    function copiarCupom(codigo) {
+    navigator.clipboard.writeText(codigo).then(() => {
+        alert("Cupom copiado: " + codigo);
+    }).catch(() => {
+        alert("Não foi possível copiar o cupom.");
+    });
+
+    }
+    </script>
 </body>
 </html>

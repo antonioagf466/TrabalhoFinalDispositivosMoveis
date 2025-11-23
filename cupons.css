@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background: #F4F4F4;
+    color: #333;
+}
+
+.pagina {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====================================== */
+/* CONTEÚDO */
+/* ====================================== */
+.conteudo {
+    padding: 40px 16px;
+}
+
+.conteudo-centro {
+    max-width: 900px;
+    margin: auto;
+}
+
+.titulo {
+    font-size: 28px;
+    margin-bottom: 24px;
+    color:#111;
+}
+
+/* ====================================== */
+/* CARTÕES DE CUPOM */
+/* ====================================== */
+.cupom-cartao {
+    background: white;
+    border-radius: 8px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* FUROS LATERAIS  */
+.cupom-cartao::before,
+.cupom-cartao::after {
+    content: "";
+    width: 30px;
+    height: 34px;
+    background: #F4F4F4;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% + 56px);
+    transform: translateY(-50%);
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.35);
+}
+
+.cupom-cartao::before { left: -13px; }
+.cupom-cartao::after { right: -13px; }
+
+/* TOP */
+.cupom-topo {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ícone */
+.icone-area {
+    position: relative;
+}
+
+.icone-bg {
+    width: 56px;
+    height: 56px;
+    background: #c7f3ec;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.icone {
+    font-size: 32px;
+    color:#028090;
+}
+
+.icone-validado {
+    width: 22px;
+    height: 22px;
+    background: #22c55e;
+    border-radius: 50%;
+    border:2px solid white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    right:-4px;
+    bottom:-4px;
+}
+
+.cupom-esquerda {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.cupom-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cupom-titulo {
+    font-size: 1.80rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.cupom-texto {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #555;
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.info-icone {
+    font-size: 18px;
+    color:#666;
+}
+
+.cupom-codigo {
+    padding: 4px 10px;
+    border-radius: 6px;
+    border:1px dashed #999;
+    font-size:14px;
+    font-weight:500;
+    color:#555;
+}
+
+/* DIVISOR */
+.cupom-divider-container {
+    padding:16px 24px;
+    position:relative;
+}
+
+.cupom-divider {
+    height:2px;
+    background-image:linear-gradient(to right, #d1d5db 50%, transparent 50%);
+    background-size: 8px 1px;
+    background-repeat: repeat-x;
+    position: relative;
+    top: -22px;
+}
+
+/* RODAPÉ */
+.cupom-rodape {
+    padding: 0 24px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.rodape-info {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:14px;
+    color:#555;
+}
+
+/* BOTÃO */
+.botao-acao {
+    background:#028090;
+    color:white;
+    border:none;
+    padding:8px 18px;
+    border-radius:6px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.botao-acao:hover {
+    background:#026b75;
+}
+
+/* ===============================
+   MEDIA QUERY
+   =============================== */
+@media (max-width: 480px) {
+
+    .cupom-divider {
+        top: -10px;
+    }
+
+    .cupom-cartao::before,
+    .cupom-cartao::after {
+        top: calc(50% + 8px);
+    }
+}

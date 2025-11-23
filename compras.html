@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Notifications</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="compras.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="page-inner">
+      <h1 class="titulo">Suas Compras</h1>
+
+      <div class="lista-cards">
+
+        <!-- CARD 1 -->
+        <article class="card card-row">
+          <img class="card-img" alt="Black long-sleeve sport shirt"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxZik4XAWGKmGE33C7qEpsYPyUgHilVjj6TQRE4U5IITyp-urCkp-OoxzbAl3NtxFqglx4dwvor61zt1nF4np9u8bGiFVGZ6LctzaAYvPc_MXghetwOpFiqzfFROdm93Ma0B8mPxBfxpXblgyBaIEQLnMuSIDLIkJqEaMHoyQ09x7JxpHt531_Rjc-npRspI_-ZY2rZJGMSUPcF6oT_hCI6B5X0U_bRFLcDMvhCCHxa0BU3mJxDXRJo8Nt3kzWWzBnOYo7-3UzPwTA" />
+
+          <div class="card-body">
+            <h2 class="card-title">Responderam em</h2>
+
+            <div class="mensagens">
+              <p class="mensagem">
+                <span class="material-icons icone">chat_bubble_outline</span>
+                <span>Olá, o que as cores que você tem?</span>
+              </p>
+
+              <p class="mensagem">
+                <span class="material-icons icone">chat_bubble_outline</span>
+                <span>Saí em preto, azul escuro e cinza. Saudações!</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn-texto">Perguntar</button>
+            <button class="btn-primario">Comprar</button>
+          </div>
+        </article>
+
+        <!-- CARD 2 (barra de progresso 75%) -->
+        <article class="card card-row">
+          <img class="card-img-small" alt="Modern smartphone with a colorful screen"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3TKzq4cLnKkrp54-5SdCQQJ6dwUkMeJFm4lRJTkPQ19naNN4b4KnMj4bGY7kvg1tFk5W0i5TUfE9NgApgJn8dHrEJgKp_kEnQ7LHsZJCTy_1QqQbLvGkZ7wTc8PjB0cHkd94TkGBNaS4xUTjBF1gL_xU8O2gtSr8aWTwuL7nGq6LwQubGlKb8HA_CmvM4Des4-xoRVEVIhsjGQvYu253m7FmyIa2nffc7IMagmr3lzILNmMv6rtwx4Qh21JWtj_6cdCfPaB8a50v5" />
+
+          <div class="card-body w-full">
+            <h2 class="card-title">A caminho!</h2>
+
+            <div class="progresso-wrap">
+              <div class="progresso-linha">
+                <div class="progresso-fill porcent-75"></div>
+              </div>
+
+              <!-- pontos e textos posicionados -->
+              <div class="progresso-pontos">
+                <span class="ponto" style="left:0%"></span>
+                <span class="ponto" style="left:25%"></span>
+                <span class="ponto" style="left:50%"></span>
+                <span class="ponto" style="left:75%"></span>
+                <span class="ponto inativo" style="left:100%; transform: translate(-100%, -50%)"></span>
+              </div>
+
+              <div class="progresso-textos">
+                <div class="txt left">24/04</div>
+                <div class="txt at25" style="left:25%">separando</div>
+                <div class="txt at50" style="left:50%">a caminho</div>
+                <div class="txt at75" style="left:75%">em trânsito</div>
+                <div class="txt right">29/04</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn-texto">Acompanhar envio</button>
+          </div>
+        </article>
+
+        <!-- CARD 3 (barra 25%) -->
+        <article class="card card-row">
+          <img class="card-img-small" alt="White ceramic coffee mug"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcRpVJ_3O9uexHTQet3GI2crXwNWeIr4GHbb106SF00LC4mTmD8Wj213HBNIfLjVipphlOX0uzW95uZ2yvTTleBPem4C-105aSHbjm_05b4GdEgaEUARrKBF-Q1Ywv60Nvb3RDgNd6Vwit6qsqeta4qgSqh2nAjHBvAXc7XxckqBf5eSSV-PzEDogNWzC4StvS_8gMqf013h3dKjitLZ8EaqZfYbVO2NNxfQ1jwflS4-NED8vAKLPsDV6noPq8gMMKpV6Vuqrlc7SV" />
+
+          <div class="card-body w-full">
+            <h2 class="card-title">A caminho!</h2>
+
+            <div class="progresso-wrap">
+              <div class="progresso-linha">
+                <div class="progresso-fill porcent-25"></div>
+              </div>
+
+              <div class="progresso-pontos">
+                <span class="ponto" style="left:0%"></span>
+                <span class="ponto" style="left:25%"></span>
+                <span class="ponto inativo" style="left:50%"></span>
+                <span class="ponto inativo" style="left:75%"></span>
+                <span class="ponto inativo" style="left:100%"></span>
+              </div>
+
+              <div class="progresso-textos">
+                <div class="txt left">30/04</div>
+                <div class="txt at25" style="left:25%">separando</div>
+                <div class="txt at50" style="left:50%">a caminho</div>
+                <div class="txt at75" style="left:75%">em trânsito</div>
+                <div class="txt right">05/05</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn-texto">Acompanhar envio</button>
+          </div>
+        </article>
+
+        <!-- CARD 4 (reembolso) -->
+        <article class="card card-row items-center">
+          <div class="icone-wrap">
+            <div class="icone-box">
+              <span class="material-icons icone-grande">replay</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <h2 class="card-title">Reembolso disponível 02/05</h2>
+            <p class="mensagem detalhe">Verifique sua conta para detalhes.</p>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn-texto">Ver reembolso</button>
+          </div>
+        </article>
+
+        <!-- CARD 5 (promoção) -->
+        <article class="card card-row">
+          <div class="presente">
+            <div class="presente-box">
+              <span class="material-icons icone-presente">card_giftcard</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <h2 class="card-title">Até 70% OFF! Todo dia é dia de preço black!</h2>
+            <img class="banner" alt="Promotional banner for a black friday sale showing electronics and shoes"
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjTamgoJEVlSoPCXQgmM1Vm8iodiZ-1XnamqiwXndkf8xswAGQt9wSaZc7r9zgY1IOXImmoKwZhYLYuK9ui3KnCC2GwXW5h2jgDPpbAWe17-AQCKu0I1R0EhDAlV3uZlLfFQIj18Pix9TU3R9Cw48Mxb24CfCtHjsNvjgy6JQMl9HXoKd-17v6c96DeWXK5YHutE2Uwp19KsuG7-x1WNlk6i4StiicKMGncoyeSTVRIEh2hzrgbEBPopWsRttk8ptGJEPUofJfCfhm" />
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

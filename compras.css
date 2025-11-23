@@ -1,0 +1,254 @@
+:root{
+  --primary: #2A9D8F;
+  --bg-light: #FFFFFF;
+  --bg-secondary: #F9FAFB;
+  --text: #111827;
+  --subtle: #6B7280;
+  --progress: #00A896;
+  --progress-inactive: #D1D5DB;
+}
+
+html.dark {
+  --bg-light: #1F2937;
+  --bg-secondary: #374151;
+  --text: #F9FAFB;
+  --subtle: #9CA3AF;
+}
+
+/* Reset simples */
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background: var(--bg-light);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout principal */
+.page { 
+    min-height: 100vh; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    padding:16px; 
+}
+
+.page-inner { 
+    width:100%; 
+    max-width:900px; 
+}
+
+/* Título */
+.titulo {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+    color: var(--text);
+}
+
+/* Lista de cards */
+.lista-cards { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.5rem; 
+}
+
+/* ---------- CARD ---------- */
+.card {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.15);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* Variantes */
+.card-row { align-items: center; }
+.items-center { align-items: center; }
+
+/* Imagens */
+.card-img { width:96px; height:96px; object-fit:cover; border-radius:8px; flex-shrink:0; }
+.card-img-small { width:72px; object-fit:contain; height:auto; border-radius:8px; flex-shrink:0; }
+
+/* Body */
+.card-body { flex:1 1 auto; min-width:0; }
+.card-body.w-full { width:100%; }
+
+.card-title { 
+    margin: 6px 0 30px 0; 
+    font-weight:700; 
+    font-size:1.0625rem; 
+    color:var(--text); 
+}
+
+/* Mensagens */
+.mensagens { color: var(--subtle); }
+.mensagem { display:flex; gap:.5rem; margin:6px 0; align-items:flex-start; }
+.mensagem .icone { font-size:1rem; margin-top:3px; color:var(--subtle); }
+.detalhe { color: var(--subtle); margin:4px 0 0 0; }
+
+/* Ações */
+.card-actions { 
+    display:flex; 
+    gap: .75rem; 
+    margin-left:auto; 
+    align-items:center; 
+    flex-shrink:0; 
+}
+
+.btn-texto {
+    background:none; 
+    border: none; 
+    color: var(--primary); 
+    font-weight:600; 
+    cursor:pointer; 
+    padding:6px 8px;
+}
+
+.btn-primario {
+    background: var(--primary);
+    color: #fff;
+    border:none;
+    padding:8px 18px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* ---------- BARRA DE PROGRESSO ---------- */
+.progresso-wrap { 
+    position: relative; 
+    width:100%; 
+    padding-top: 1rem;
+    margin-top: 4px;
+}
+
+/* linha de fundo */
+.progresso-linha {
+    width:100%;
+    height: 8px;
+    background: #E5E7EB;
+    border-radius: 999px;
+    position: relative;
+    overflow: visible;
+}
+
+/* preenchimento */
+.progresso-fill {
+    height: 8px;
+    background: var(--progress);
+    border-radius: 999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.porcent-75 { width: 75%; }
+.porcent-25 { width: 25%; }
+
+/* pontos */
+.progresso-pontos { 
+    position: absolute; 
+    top: 0; left:0; 
+    right:0; 
+    height:100%; 
+    pointer-events:none; 
+    margin-left: 5px;
+}
+
+.ponto {
+    position: absolute;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--progress);
+    border: 2px solid #fff;
+    box-sizing: content-box;
+}
+
+.ponto.inativo { 
+    background: var(--progress-inactive); 
+    border: 2px solid #fff; 
+}
+
+/* textos acima */
+.progresso-textos { 
+    position: absolute; 
+    top: -1.3rem;
+    left:0; 
+    right:0; 
+    font-size: .75rem; 
+    color: var(--subtle); 
+    pointer-events:none; 
+}
+
+.progresso-textos .txt { position:absolute; transform: translateX(-50%); white-space:nowrap; }
+.progresso-textos .left { left:0; transform: none; }
+.progresso-textos .right { right:0; left:auto; transform: none; }
+.progresso-textos .at25,.progresso-textos .at50,.progresso-textos .at75 { transform: translateX(-50%); text-align:center; }
+
+/* ---------- ICONE / PRESENTE ---------- */
+.icone-wrap { 
+    flex-shrink:0; 
+    display:flex; 
+    align-items:center; 
+}
+
+.icone-box {
+    width:64px; 
+    height:64px; 
+    border-radius:10px; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    background: rgba(42,157,143,0.08);
+}
+
+.icone-grande { 
+    font-size:28px; 
+    color: var(--primary); 
+}
+
+.presente .presente-box, .presente-box {
+    width:80px; 
+    height:80px; 
+    border-radius:12px; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    background:#E5E7EB;
+}
+.icone-presente { 
+    font-size:30px; 
+    color: var(--subtle); 
+}
+
+.banner { 
+    width:100%; 
+    margin-top: 1rem; 
+    border-radius:8px; 
+}
+
+/* ---------- MEDIA QUERY ---------- */
+@media (min-width: 640px) {
+  .card { gap: 1.25rem; }
+  .card-img-small { width:80px; }
+  .icone-box { width:80px; height:80px; }
+  .presente-box { width:90px; height:90px; }
+}
+
+@media (min-width: 1024px) {
+  .page { padding: 32px; }
+  .titulo { font-size: 2.5rem; }
+}

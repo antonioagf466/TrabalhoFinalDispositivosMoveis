@@ -77,8 +77,25 @@ body {
 .items-center { align-items: center; }
 
 /* Imagens */
-.card-img { width:96px; height:96px; object-fit:cover; border-radius:8px; flex-shrink:0; }
-.card-img-small { width:72px; object-fit:contain; height:auto; border-radius:8px; flex-shrink:0; }
+.card-img {
+    width:96px;
+    height:96px;
+    object-fit:cover;
+    border-radius:8px;
+    flex-shrink:0;
+}
+
+/* Correção sólida e definitiva para imagens do card */
+.card-img-small {
+  width: 72px !important;
+  height: 72px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 8px !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+
 
 /* Body */
 .card-body { flex:1 1 auto; min-width:0; }

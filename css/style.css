@@ -186,6 +186,11 @@ body {
     padding: 0 var(--space-sm);
     flex-shrink: 0;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-form button:hover {
+    background-color: var(--border-light);
 }
 
 .header-actions {

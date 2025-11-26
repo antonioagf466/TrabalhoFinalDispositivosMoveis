@@ -67,8 +67,7 @@ body {
     background-color: var(--green-blue);
     padding: var(--space-sm) 0;
     position: sticky;
-    top: 0;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 .header-container1 {
@@ -76,6 +75,7 @@ body {
     align-items: center;
     gap: var(--space-sm);
     padding: 0 var(--space-sm);
+    position: relative;
 }
 
 .header-container1 ul {
@@ -88,8 +88,6 @@ body {
 .header-container2 {
     display: none;
     justify-content: center;
-    gap: var(--space-xl);
-    position: absolute;
     top: 100%;
     background-color: var(--green-blue);
     width: 100%;
@@ -137,17 +135,13 @@ body {
 }
 
 .hamburger-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: none;
     border: none;
     color: var(--text-white);
     font-size: 1.5rem;
     cursor: pointer;
-    padding: var(--space-sm);
-    margin-right: var(--space-sm);
-    margin: auto;
+    margin-left:auto;
+    margin-right:10%;
 }
 
 .brand-logo {
@@ -165,25 +159,32 @@ body {
 }
 
 .search-form {
-    flex: 1;
     display: flex;
-    min-width: 0;
-    max-width: 50%;
-    margin-left: 2px;
+    align-items: center;
+    justify-content: flex-end;
+    transition: all 0.3s ease;
 }
 
 .search-form input {
-    flex: 1;
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
     border: none;
-    padding: var(--space-xs) var(--space-sm);
+    padding: 0;
     font-size: 0.9rem;
     min-width: 0;
 }
+.search-form.search-form-expanded .search-input {
+    width: 100%;
+    opacity: 1;
+    padding: var(--space-xs) var(--space-sm);
+}
+
 
 .search-form button {
     background-color: var(--bg-light);
     border: none;
-    padding: 0 var(--space-sm);
+    padding: var(--space-xs) var(--space-sm);
     flex-shrink: 0;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -420,9 +421,16 @@ body {
 }
 
 .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
+}
+.footer-links li {
+    margin: 0;
+    padding: 0;
 }
 
 .footer-links a {
@@ -430,6 +438,7 @@ body {
     text-decoration: none;
     font-size: 0.8rem;
     transition: color 0.3s ease;
+    display: block;
 }
 
 .footer-links a:hover {
@@ -473,45 +482,90 @@ body {
 .bg-light-custom {
     background-color: var(--bg-light);
 }
-/* ========== PRODUCT PAGE ========== */
-/* PRODUCT PAGE STYLES MOVED TO produto.css */
-
-/* ========== ABOUT PAGE ========== */
-/* ABOUT PAGE STYLES MOVED TO sobrenos.css */
-
-/* CAREERS/TRABALHE PAGE STYLES MOVED TO trabalhe.css */
 
 /* ========== RESPONSIVE ========== */
+@media (max-width: 464px) {
+    .search-form.search-form-expanded {
+        position: absolute;
+        left: var(--space-sm);
+        right: var(--space-sm);
+        top: calc(100% + var(--space-sm));
+        background: var(--green-blue);
+        padding: var(--space-sm);
+        z-index: 1000;
+        justify-content: flex-start;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+
+    /* Header aumenta de altura quando busca expandida */
+.header-top.search-expanded {
+    padding-bottom: var(--space-lg);
+    z-index: 1000;
+    position: relative;
+}
+}
+
 @media (min-width: 465px) {
+    .header-top.search-expanded {
+        padding-bottom: var(--space-sm);
+        min-height: auto;
+    }
+    
+    body.search-expanded {
+        margin-top: 0;
+    }    
+    .search-input {
+        width: 100% !important;
+        opacity: 1 !important;
+        padding: var(--space-xs) var(--space-sm) !important;
+    }
+
+    .search-form {
+        justify-content: flex-start;
+    }
     .footer-sections {
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+    .footer-section {
+        width: 40%;
     }
 
     .hamburger-btn {
         display: none;
     }
 
-    .header-container2 {
+ .header-container2 {
         display: flex !important;
         position: static;
         background-color: transparent;
         box-shadow: none;
         padding: 0;
         flex-direction: row;
-        gap: var(--space-xl);
+        gap: var(--space-md); /* Reduzindo o gap para dar mais espaço */
         justify-content: center;
+        flex-wrap: nowrap; /* Impede quebra de linha */
     }
 
     .header-container2 ul {
         display: flex;
         flex-direction: row;
-        gap: var(--space-xl);
+        gap: var(--space-md); /* Reduzindo o gap aqui também */
         margin-top: 20px;
+        flex-wrap: nowrap; 
+    }
+
+    .header-container2 ul li a {
+        white-space: nowrap; /* Impede quebra de texto dentro dos links */
     }
 
     .header-container2 ul li {
         border-bottom: none;
+        flex-wrap: nowrap;
     }
 
     .header-container2 ul li a {
@@ -540,10 +594,14 @@ body {
 
 
 @media (min-width: 660px) {
+
     .header-container1 {
         justify-content: space-between;
         margin-left: 5%;
         margin-right: 5%;
+    }
+    .header-container2 ul{
+        gap: var(--space-lg);
     }
 
     .careers-container {
@@ -622,6 +680,12 @@ body {
 
     .about-container {
         padding: 30px;
+    }
+}
+@media (min-width: 660px) and (max-width: 799px) {
+    .categories-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
     }
 }
 
@@ -726,5 +790,13 @@ body {
     .team-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 40px;
+    }
+    .footer-sections {
+        justify-content: space-around;
+    }
+
+    .footer-section {
+        flex: 1; /* Cada seção ocupa igualmente o espaço, resultando em 4 colunas */
+        margin-bottom: 0;
     }
 }

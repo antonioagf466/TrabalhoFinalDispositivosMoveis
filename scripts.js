@@ -225,3 +225,75 @@ window.copiarCupom = function(codigo) {
         alert("Não foi possível copiar o cupom.");
     });
 };
+// Search Toggle Functionality - ATUALIZADO
+document.addEventListener('DOMContentLoaded', function() {
+    const searchToggle = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+    const searchForm = document.getElementById('searchForm');
+    const headerTop = document.querySelector('.header-top');
+    const body = document.body;
+    
+    if (searchToggle && searchInput) {
+        // Toggle search expansion
+        searchToggle.addEventListener('click', function() {
+            if (window.innerWidth < 465) {
+                if (searchForm.classList.contains('search-form-expanded')) {
+                    // Se já está expandido e tem texto, submete o formulário
+                    if (searchInput.value.trim() !== '') {
+                        searchForm.submit();
+                    } else {
+                        // Se não tem texto, recolhe
+                        searchForm.classList.remove('search-form-expanded');
+                        headerTop.classList.remove('search-expanded');
+                        body.classList.remove('search-expanded');
+                        searchInput.blur();
+                    }
+                } else {
+                    // Expande o input
+                    searchForm.classList.add('search-form-expanded');
+                    headerTop.classList.add('search-expanded');
+                    body.classList.add('search-expanded');
+                    searchInput.focus();
+                }
+            } else {
+                // Em telas maiores, sempre submete o formulário
+                searchForm.submit();
+            }
+        });
+        
+        // Fecha a busca se clicar fora
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth < 465 && 
+                searchForm.classList.contains('search-form-expanded') &&
+                !searchForm.contains(e.target) &&
+                e.target !== searchToggle) {
+                searchForm.classList.remove('search-form-expanded');
+                headerTop.classList.remove('search-expanded');
+                body.classList.remove('search-expanded');
+                searchInput.blur();
+            }
+        });
+        
+        // Também fecha ao pressionar Escape
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                searchForm.classList.remove('search-form-expanded');
+                headerTop.classList.remove('search-expanded');
+                body.classList.remove('search-expanded');
+                searchInput.blur();
+            }
+        });
+
+        // Fecha o search quando a tela é redimensionada para desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 465) {
+                if (searchForm.classList.contains('search-form-expanded')) {
+                    searchForm.classList.remove('search-form-expanded');
+                    headerTop.classList.remove('search-expanded');
+                    body.classList.remove('search-expanded');
+                }
+            }
+        });
+    }
+});
+

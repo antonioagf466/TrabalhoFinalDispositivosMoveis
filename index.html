@@ -21,9 +21,9 @@
                 </div>
 
                 <!-- Barra de Pesquisa -->
-                <form class="search-form" action="#">
-                    <input type="text" placeholder="Buscar..." aria-label="Buscar produtos">
-                    <button type="submit" aria-label="Pesquisar">
+                <form class="search-form" action="#" id="searchForm">
+                    <input type="text" placeholder="Buscar..." aria-label="Buscar produtos" class="search-input" id="searchInput">
+                    <button type="button" aria-label="Pesquisar" id="searchButton">
                         <i class="bi bi-search"></i>
                     </button>
                 </form>
@@ -35,7 +35,6 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="conta.html">Minha conta</a></li>
                                 <li><a class="dropdown-item" href="compras.html">Compras</a></li>
-                                <li><a class="dropdown-item" href="favoritos.html">Favoritos</a></li>
                             </ul>
                         </li>
                         <li><a class="nav-link" href="cart.html" aria-label="Carrinho de compras">
@@ -43,11 +42,11 @@
                         </a></li>
                     </ul>
                 </nav>
-            </div>
-                <!-- Hamburguer Menu Button -->
+                                <!-- Hamburguer Menu Button -->
                 <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu de navegação">
                     <i class="bi bi-list"></i>
                 </button>
+            </div>
                 <!-- Ações -->
                 <div class="header-container2" id="headerMenu">
                     <nav>
@@ -261,58 +260,66 @@
         </div>
     </div>
 
-    <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-sections">
-                <!-- Seção 1 -->
-                <div class="footer-section">
-                    <h6>Informações</h6>
-                    <div class="footer-links">
-                        <a href="sobrenos.html">Sobre nós</a>
-                        <a href="suporte.html">Contato</a>
-                        <a href="sobrenos.html">Política de privacidade</a>
-                        <a href="sobrenos.html">Termos e condições</a>
-                    </div>
-                </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-sections">
+        <!-- Seção 1 -->
+        <div class="footer-section">
+            <h6>Informações</h6>
+            <nav aria-label="Informações">
+                <ul class="footer-links">
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                    <li><a href="suporte.html">Contato</a></li>
+                    <li><a href="sobrenos.html">Política de privacidade</a></li>
+                    <li><a href="sobrenos.html">Termos e condições</a></li>
+                </ul>
+            </nav>
+        </div>
 
-                <!-- Seção 2 -->
-                <div class="footer-section">
-                    <h6>Minha conta</h6>
-                    <div class="footer-links">
-                        <a href="conta.html">Entrar</a>
-                        <a href="compras.html">Meus pedidos</a>
-                        <a href="favoritos.html">Lista de desejos</a>
-                        <a href="compras.html">Histórico</a>
-                    </div>
-                </div>
+        <!-- Seção 2 -->
+        <div class="footer-section">
+            <h6>Minha conta</h6>
+            <nav aria-label="Minha conta">
+                <ul class="footer-links">
+                    <li><a href="conta.html">Entrar</a></li>
+                    <li><a href="compras.html">Meus pedidos</a></li>
+                    <li><a href="favoritos.html">Lista de desejos</a></li>
+                    <li><a href="compras.html">Histórico</a></li>
+                </ul>
+            </nav>
+        </div>
 
-                <!-- Seção 3 -->
-                <div class="footer-section">
-                    <h6>Atendimento</h6>
-                    <div class="footer-links">
-                        <a href="suporte.html">Ajuda</a>
-                        <a href="suporte.html">Frete</a>
-                        <a href="suporte.html">Trocas</a>
-                        <a href="suporte.html">Devoluções</a>
-                    </div>
-                </div>
+        <!-- Seção 3 -->
+        <div class="footer-section">
+            <h6>Atendimento</h6>
+            <nav aria-label="Atendimento">
+                <ul class="footer-links">
+                    <li><a href="suporte.html">Ajuda</a></li>
+                    <li><a href="suporte.html">Frete</a></li>
+                    <li><a href="suporte.html">Trocas</a></li>
+                    <li><a href="suporte.html">Devoluções</a></li>
+                </ul>
+            </nav>
+        </div>
 
-                <!-- Seção 4 -->
-                <div class="footer-section">
-                    <h6>Redes sociais</h6>
-                    <div class="footer-links">
-                        <a href="https://www.facebook.com"><i class="bi bi-facebook"></i> Facebook</a>
-                        <a href="https://x.com/home"><i class="bi bi-twitter"></i> Twitter</a>
-                        <a href="https://www.instagram.com"><i class="bi bi-instagram"></i> Instagram</a>
-                    </div>
-                </div>
-            </div>
+        <!-- Seção 4 -->
+        <div class="footer-section">
+            <h6>Redes sociais</h6>
+            <nav aria-label="Redes sociais">
+                <ul class="footer-links">
+                    <li><a href="https://www.facebook.com"><i class="bi bi-facebook"></i> Facebook</a></li>
+                    <li><a href="https://x.com/home"><i class="bi bi-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.instagram.com"><i class="bi bi-instagram"></i> Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
-            <!-- Copyright -->
-            <div class="copyright">
-                <p>© 2023 Mercado Dibre - Todos os direitos reservados</p>
-            </div>
-        </footer>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>© 2023 Mercado Dibre - Todos os direitos reservados</p>
+    </div>
+</footer>
 
 
 

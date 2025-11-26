@@ -221,3 +221,10 @@
 .contact-cta p {
     margin-bottom: 20px;
 }
+/* ========== MEDIA QUERY 800px - 990px ========== */
+@media (min-width: 800px) and (max-width: 990px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px;
+    }
+}

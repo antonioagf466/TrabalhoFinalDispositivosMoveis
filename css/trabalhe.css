@@ -13,8 +13,11 @@
 
 .form-row {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -8px;
+    margin: 0;
+    flex-direction:column;
+}
+.form-row input{
+    width:100%;
 }
 
 .form-group {
@@ -24,7 +27,8 @@
 }
 
 .form-group.half {
-    width: 50%;
+    width: 100%;
+    flex-direction: column;
 }
 
 .form-label {

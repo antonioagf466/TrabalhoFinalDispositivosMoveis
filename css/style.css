@@ -538,6 +538,11 @@ body {
     .hamburger-btn {
         display: none;
     }
+    .form-row{
+        flex-direction: row;
+        margin: 0;
+    }
+    }
 
  .header-container2 {
         display: flex !important;
@@ -577,10 +582,6 @@ body {
         background-color: transparent;
     }
 
-    .form-group.half {
-        width: calc(50% - 16px);
-    }
-
     .benefits-grid {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -590,7 +591,6 @@ body {
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
     }
-}
 
 
 @media (min-width: 660px) {
@@ -610,17 +610,12 @@ body {
         margin: 0 auto;
     }
 
-    .form-row {
-        margin: 0 -12px;
-    }
+
 
     .form-group {
         padding: 0 12px;
     }
 
-    .form-group.half {
-        width: calc(50% - 24px);
-    }
 
     .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -704,17 +699,6 @@ body {
         margin: 0 auto;
     }
 
-    .form-row {
-        margin: 0 -12px;
-    }
-
-    .form-group {
-        padding: 0 12px;
-    }
-
-    .form-group.half {
-        width: calc(50% - 24px);
-    }
 
     .benefits-grid {
         grid-template-columns: repeat(3, 1fr);

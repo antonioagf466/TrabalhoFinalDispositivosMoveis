@@ -50,7 +50,7 @@ a{text-decoration: none;
 }
 
 html {
-    font-size: 14px; /* Base menor para mobile */
+    font-size: 14px;
 }
 
 body {
@@ -177,8 +177,6 @@ body {
     margin-bottom: 0;
     text-align: center;
 }
-
-
 
 .footer-section h6 {
     color: var(--text-gray);

@@ -207,6 +207,59 @@ body {
 /* ===============================
    MEDIA QUERY
    =============================== */
+@media (min-width: 1000px) {
+    .lista-cupons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .cupom-cartao {
+        margin-bottom: 0;
+        padding-bottom: 20px;
+    }
+
+    .cupom-topo {
+        padding: 18px;
+    }
+
+    .cupom-divider-container {
+        padding: 12px 18px;
+    }
+
+    .cupom-rodape {
+        padding: 40px 18px 20px;
+    }
+
+    .cupom-titulo {
+        font-size: 1.45rem;
+    }
+
+    .cupom-texto {
+        font-size: 13px;
+    }
+
+    .icone-bg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .icone {
+        font-size: 28px;
+    }
+
+    .cupom-codigo {
+        font-size: 13px;
+        padding: 3px 8px;
+    }
+
+    .cupom-cartao::before,
+    .cupom-cartao::after,
+    .cupom-divider {
+        top: calc(50% + 40px);
+    }
+}
+  
 @media (max-width: 480px) {
 
     .cupom-divider {
@@ -220,3 +273,111 @@ body {
         top: calc(50% + 8px);
     }
 }
+
+
+@media (max-width: 520px) and (min-width: 360px) {
+
+    .conteudo {
+        padding: 24px 12px;
+    }
+
+    .titulo {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    .cupom-cartao {
+        margin-bottom: 20px;
+    }
+
+    .cupom-topo {
+    padding: 14px;
+    gap: 12px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .cupom-esquerda {
+        gap: 12px;
+    }
+
+    .icone-bg {
+        width: 44px;
+        height: 44px;
+    }
+
+    .icone {
+        font-size: 24px;
+    }
+
+    .cupom-titulo {
+        font-size: 1.15rem;
+    }
+
+    .cupom-texto {
+        font-size: 12px;
+    }
+
+    .cupom-codigo {
+    font-size: 12px;
+    padding: 3px 8px;
+    margin: 0;
+    align-self: auto;
+    white-space: nowrap;
+    }
+
+    .cupom-divider-container {
+        padding: 10px 14px;
+    }
+
+    .cupom-divider {
+        top: calc(50% + 6px);
+        left: 14px;
+        right: 14px;
+    }
+
+    .cupom-cartao::before,
+    .cupom-cartao::after {
+        top: calc(50% + 6px);
+        width: 24px;
+        height: 26px;
+    }
+
+    .cupom-rodape {
+        padding: 32px 14px 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .rodape-info {
+        font-size: 12px;
+    }
+
+    .botao-acao {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .header-container1 {
+        gap: 8px !important;
+        padding: 6px 10px !important;
+    }
+
+    .brand-logo img {
+        max-width: 90px;
+    }
+
+    .search-input {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .search-form {
+        flex: 1;
+    }
+
+}
+

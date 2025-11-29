@@ -64,10 +64,8 @@
                     </nav>
                 </div>
         </header>
+
     <div class="pagina">
-   
-
-
     <main class="conteudo">
         <div class="conteudo-centro">
             <h1 class="titulo">Cupons Disponíveis</h1>
@@ -132,8 +130,8 @@
                             </div>
 
                             <div class="cupom-info">
-                                <h2 class="cupom-titulo">R$50 OFF em eletrônicos</h2>
-                                <p class="cupom-texto">Para toda a categoria</p>
+                                <h2 class="cupom-titulo">R$50 OFF em eletrônicos selecionados</h2>
+                                <p class="cupom-texto">Válido apenas em produtos selecionados</p>
                                 <p class="cupom-texto">Compra mínima R$399</p>
                                 <p class="cupom-texto limite">
                                     Limite de R$6.000
@@ -176,7 +174,7 @@
 
                             <div class="cupom-info">
                                 <h2 class="cupom-titulo">12% OFF em alimentos</h2>
-                                <p class="cupom-texto">Válido apenas em produtos selecionados</p>
+                                <p class="cupom-texto">Para toda a categoria</p>
                                 <p class="cupom-texto">Sem valor mínimo</p>
                                 <p class="cupom-texto limite">
                                     Limite de R$240
@@ -219,7 +217,7 @@
 
                             <div class="cupom-info">
                                 <h2 class="cupom-titulo">9% de cashback em jogos</h2>
-                                <p class="cupom-texto">Incluindo consoles e acessórios</p>
+                                <p class="cupom-texto">Para toda a categoria</p>
                                 <p class="cupom-texto">Compra mínima R$199</p>
                                 <p class="cupom-texto limite">
                                     Limite de R$4.000
@@ -261,8 +259,8 @@
                             </div>
 
                             <div class="cupom-info">
-                                <h2 class="cupom-titulo">12% OFF em móveis</h2>
-                                <p class="cupom-texto">Para toda a categoria</p>
+                                <h2 class="cupom-titulo">12% OFF em móveis selecionados</h2>
+                                <p class="cupom-texto">Válido apenas em produtos selecionados</p>
                                 <p class="cupom-texto">Compra mínima R$499</p>
                                 <p class="cupom-texto limite">
                                     Limite de R$3.000
@@ -287,6 +285,49 @@
                         <button class="botao-acao" onclick="copiarCupom('MOVEIS12')">Usar cupom</button>
                     </div>
                 </div>
+                
+                <div class="cupom-cartao">
+                    <div class="cupom-topo">
+
+                        <div class="cupom-esquerda">
+                            <div class="icone-area">
+                                <div class="icone-bg">
+                                    <span class="material-icons-outlined icone">local_shipping</span>
+                                </div>
+
+                                <div class="icone-validado">
+                                    <span class="material-icons-outlined">done</span>
+                                </div>
+                            </div>
+
+                            <div class="cupom-info">
+                                <h2 class="cupom-titulo">Frete grátis para todo Brasil</h2>
+                                <p class="cupom-texto">Válido para qualquer categoria</p>
+                                <p class="cupom-texto">Compra mínima R$199</p>
+                                <p class="cupom-texto limite">
+                                    Limite de R$1.000
+                                    <span class="material-icons-outlined info-icone">info_outline</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="cupom-codigo">FRETEGRATIS</div>
+                    </div>
+
+                    <div class="cupom-divider-container">
+                        <div class="cupom-divider"></div>
+                    </div>
+
+                    <div class="cupom-rodape">
+                        <div class="rodape-info">
+                            <span class="material-icons-outlined">schedule</span>
+                            Expira em 10 dias
+                        </div>
+
+                        <button class="botao-acao" onclick="copiarCupom('FRETEGRATIS')">Usar cupom</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
@@ -343,6 +384,6 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

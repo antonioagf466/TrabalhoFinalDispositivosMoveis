@@ -1,4 +1,5 @@
 /* ========== CART PAGE SPECIFIC STYLES ========== */
+/* ========== CART PAGE SPECIFIC STYLES ========== */
 .cart-item {
     display: flex;
     padding: 20px 0;
@@ -136,25 +137,65 @@
     margin: 30px 0 20px;
     color: var(--text-dark);
 }
-
-/* ========== SUGGESTIONS ========== */
-.suggestions-nav {
-    margin-top: 30px;
+.card,
+.card-link {
+    border: none;
+    border-radius: 6px;
+    transition: transform 0.3s;
+    height: 100%;
 }
 
-.suggestions-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.card {
+    display: block;
 }
 
-.suggestions-item {
-    margin: 0;
-    padding: 0;
+.card:hover,
+.card-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
 }
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.card-title {
+    color: var(--text-dark);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 40px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.price {
+    font-weight: 400;
+    color: var(--text-dark);
+}
+
+.discount {
+    color: var(--success);
+}
+
+.shipping {
+    color: var(--success);
+    font-weight: 600;
+}
+
 
 /* ========== RESPONSIVE ========== */
 @media (min-width: 465px) {
@@ -170,3 +211,4 @@
         gap: 25px;
     }
 }
+

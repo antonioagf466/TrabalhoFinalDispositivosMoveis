@@ -24,8 +24,6 @@ body {
     font-family: "Roboto", sans-serif;
     background: var(--bg-light);
     color: var(--text);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Layout principal */
@@ -73,10 +71,8 @@ body {
 
 /* Variantes */
 .card-row { 
-    align-items: left; 
     flex-direction: row;
 }
-.items-center { align-items: left; }
 
 /* Imagens */
 .card-img {
